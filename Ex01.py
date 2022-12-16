@@ -3,12 +3,14 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
-a = int(input("Введите число: "))
-b = 0
+a = float(input("Введите число: "))
+if a < 0:
+    a *= -1
+while a != int(a):
+    a = round(a * 10, 10)
 sum = 0
 c = 0
-
-while b < a:
+while 0 < a:
     c = a % 10
     sum = c + sum
     a = a // 10
